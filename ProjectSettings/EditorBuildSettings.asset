@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/CustomerPickup.unity
+    guid: 854218b5e046ee74b94245f846d1785a
+  - enabled: 1
+    path: Assets/Scenes/Barista.unity
+    guid: d9e103616cadacc44922c1bd047010ff
+  - enabled: 1
+    path: Assets/Scenes/Seating Area.unity
+    guid: c1d9761d67589964bacaa4092277b4ae
+  - enabled: 1
+    path: Assets/Scenes/CoffeeMachine.unity
+    guid: 787cc5a0d0d119f4fafcca2e537d9239
   m_configObjects: {}
