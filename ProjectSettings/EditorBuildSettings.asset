@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CoffeeMachine.unity
     guid: 787cc5a0d0d119f4fafcca2e537d9239
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: ba1a862e174a84145b506ec10d158c83
   m_configObjects: {}
