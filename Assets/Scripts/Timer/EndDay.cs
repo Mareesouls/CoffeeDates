@@ -5,20 +5,17 @@ using UnityEngine;
 public class EndDay : MonoBehaviour
 {
 	
-	DayTimer customerGone;
-	
-    // Start is called before the first frame update
-    void ButtonClicked()
-    {
-		if(customerGone = false)
+	/*DayTimer timerActive;
+		
+    public void EndButton()
+	{
+		if (timerActive = false)
 		{
 			print("You still have a customer!");
 		}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		else
+		{
+			print("Day over!");
+		}
+	}*/
 }
