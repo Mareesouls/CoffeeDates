@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class CoffeeMachine : MonoBehaviour
 {
+    public TippingMachine tippingMachine;
     int water = 0;
     int sugar = 0;
     public int coffee = 0;
     int milk = 0;
     int maxIngreadients = 6;
+
+
+
     void CoffeeComplete()
     {
-    /*Count all values and check what dink is made, if the drink does not match anything the list has to offer, then it pumps out a weird drink.*/
-    /*Sets all int to 0*/
-    /*Print name of drink*/
+        
     }
 
 
@@ -55,7 +57,6 @@ public class CoffeeMachine : MonoBehaviour
         {
             print("You can not add anymore!!!");
         }
-
     }
 
     public void MilkButton()
