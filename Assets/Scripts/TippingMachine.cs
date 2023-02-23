@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TippingMachine : MonoBehaviour
 {
-
+    public bool served = false;
 
     
     // Start is called before the first frame update
@@ -16,6 +16,10 @@ public class TippingMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (served == true)
+        {
+            print(" COMPLETE");
+        }
+
     }
 }
