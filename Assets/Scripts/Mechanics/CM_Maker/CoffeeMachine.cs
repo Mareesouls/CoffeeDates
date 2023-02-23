@@ -82,7 +82,7 @@ public class CoffeeMachine : MonoBehaviour
 
     public void Serve()
     {
-        //update tippingMachine
+        TippingMachine served = true;
         coffeeMade = false;
     }
 
