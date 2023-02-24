@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SC_CustomerSpawner : MonoBehaviour
 {
+    public GameObject CUS_SPRT;
+    public Vector2 spawnPosition;
     //Max customer, cur customer, cur timer
     // int MaxCus = 3;
     //  int CurCus = 0;
     // int CurTimer = 
 
+    //dialogue when customer spawns
     //reference the whole panel
     public GameObject dialoguePanel;
-    //used to spawn sprite sheet on screen
-    public GameObject NPC;
     public Text dialogueText;
     //contain sentences
     public string[] dialogue;
@@ -22,6 +24,12 @@ public class SC_CustomerSpawner : MonoBehaviour
     private int index;
 
     public float wordSpeed;
+
+    public void OnSpawnPrefab()
+    {    
+            Instantiate(CUS_SPRT, spawnPosition, Quaternion.identity);
+        
+    }
 
     void Update()
     {
