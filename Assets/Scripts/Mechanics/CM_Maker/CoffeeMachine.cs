@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class CoffeeMachine : MonoBehaviour
 {
-    public TippingMachine tippingMachine;
+    public TippingMachine customerRequest;
+    public TippingMachine baristaCoffee;
     int water = 0;
     int sugar = 0;
     public int coffee = 0;
     int milk = 0;
     int maxIngreadients = 6;
     bool coffeeMade = false;
+    public int baristaCoffeeID = 0;
 
-
+    //Check what coffee is made
     void CoffeeComplete()
     {
-        Espresso();
         Espresso(); 
     }
 
@@ -74,15 +75,26 @@ public class CoffeeMachine : MonoBehaviour
         coffee = 0;
     }
 
+    //Starts Coffee Complete and inform the player that the coffee is done.
     public void Done()
     {
         CoffeeComplete();
         print("Coffee is complete");
     }
 
+
+    //Serve sends the data from the barista to the tippingmachines
     public void Serve()
     {
         coffeeMade = false;
+        if(baristaCoffeeID==0)
+        {
+            print("You must have something to serve!");
+        }
+        else
+        {
+            baristaCoffee = baristaCoffeeID;
+        }
     }
 
     //Drink selection
@@ -92,6 +104,7 @@ public class CoffeeMachine : MonoBehaviour
         {
             print("You made Espresso");
             coffeeMade = true;
+            baristaCoffeeID = 1;
         }
 
     }
