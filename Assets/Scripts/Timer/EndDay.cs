@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndDay : MonoBehaviour
 {
     public DayTimer dayFinished;
+	public TESTSpawnCustomer customerPresent;
 
     // Changes scene to home when timer is over
     // Needs timer to be done and there to be no customers for this to be clickable
@@ -15,7 +16,15 @@ public class EndDay : MonoBehaviour
     {
         if (dayFinished == true)
         {
-        SceneManager.LoadScene(5);
-        }
-    }
+			if(customerPresent == false)
+			{
+				print("bloop");
+				SceneManager.LoadScene(5);
+			}
+			else
+			{
+				print("You still have a customer!");
+			}
+		}
+	}	
 }

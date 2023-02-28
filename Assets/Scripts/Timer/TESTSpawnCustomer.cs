@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class TESTSpawnCustomer : MonoBehaviour
 {
-	
+
 	public bool customerPresent = false;
 	
-    // Start is called before the first frame update
+	public void OtherClick()
+    {
+        customerPresent = false;
+		print("Customer left");
+    }
+	
     public void OnClick()
     {
         customerPresent = true;
 		print("Customer spawned");
     }
+	
+	
 
 }
