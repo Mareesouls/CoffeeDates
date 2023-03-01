@@ -9,4 +9,5 @@ public class SC_MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
 }
