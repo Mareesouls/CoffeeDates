@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CoffeeMachine : MonoBehaviour
 {
-    public TippingMachine customerRequest;
-    public TippingMachine baristaCoffee;
+    public TippingMachine tippingmachine;
     int water = 0;
     int sugar = 0;
     public int coffee = 0;
@@ -93,7 +92,8 @@ public class CoffeeMachine : MonoBehaviour
         }
         else
         {
-            baristaCoffee = baristaCoffeeID;
+            tippingmachine.baristaCoffee = baristaCoffeeID;
+            tippingmachine.served = true;
         }
     }
 
