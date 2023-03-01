@@ -20,8 +20,8 @@ public class DayTimer : MonoBehaviour
         {
         if (timerActive == true && secondsLeft > 0)
             {
-                    print("start");
-                    secondsLeft -= Time.deltaTime;
+                print("start");
+                secondsLeft -= Time.deltaTime;
             }
             
         if (secondsLeft <= 0)
