@@ -18,7 +18,4 @@ public class TESTSpawnCustomer : MonoBehaviour
         customerPresent = true;
 		print("Customer spawned");
     }
-	
-	
-
 }
