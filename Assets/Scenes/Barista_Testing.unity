@@ -853,6 +853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1126133672}
   - component: {fileID: 1126133671}
+  - component: {fileID: 1126133673}
   m_Layer: 0
   m_Name: CoffeeMaker
   m_TagString: Untagged
@@ -872,8 +873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a9631f5e9c8ba4eb86c35e56fa756f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tippingMachine: {fileID: 0}
+  tippingmachine: {fileID: 1126133673}
   coffee: 0
+  baristaCoffeeID: 0
 --- !u!4 &1126133672
 Transform:
   m_ObjectHideFlags: 0
@@ -889,6 +891,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1126133673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126133670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3ab2165be1bb24fb9bf726a135e398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  served: 0
+  customerRequest: 0
+  baristaCoffee: 0
 --- !u!1 &1235935948
 GameObject:
   m_ObjectHideFlags: 0

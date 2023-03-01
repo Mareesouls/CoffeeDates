@@ -7,6 +7,7 @@ public class SC_Barista : MonoBehaviour
 {
     public void SCBarista()
     {
+        print("Play");
         SceneManager.LoadScene(2);
     }
 }
