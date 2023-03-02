@@ -16,19 +16,23 @@ public class SC_CustomerSpawner : MonoBehaviour
 
     //dialogue when customer spawns
     //reference the whole panel
-  //  public GameObject dialoguePanel;
-   // public Text dialogueText;
+    //  public GameObject dialoguePanel;
+    // public Text dialogueText;
     //contain sentences
     //public string[] dialogue;
     //find position in the string
-  //  private int index;
+    //  private int index;
 
-   // public float wordSpeed;
+    // public float wordSpeed;
 
-    public void OnSpawnPrefab()
-    {    
+    IEnumerator CustomerSpawning()
+    {
+        while (true)
+        {
             Instantiate(CUS_SPRT, spawnPosition, Quaternion.identity);
-        
+            //define your list of actions here
+        }
+        yield break;
     }
 
 // void Update()
