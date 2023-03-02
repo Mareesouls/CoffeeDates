@@ -1624,11 +1624,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CUS_SPRT: {fileID: 247754095207214608, guid: 1be6d1c5dd833dc468efd6529d9b5276, type: 3}
   spawnPosition: {x: 0, y: 0}
-  dialoguePanel: {fileID: 1797751342}
-  dialogueText: {fileID: 0}
-  dialogue:
-  - Hello, I'd like a coffee please.
-  wordSpeed: 0.06
 --- !u!1 &2068942737
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,18 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialogue : MonoBehaviour
+[System.Serializable]
+public class Dialogue
 {
-     private Queue<string> sentences;
-    
-     // Use this for initialization
-     void Start () {
-         sentences = new Queue<string>();
-     }
-    
-     public void StartDialogue (Dialogue dialogue)
-     {
-          Debug.Log ("Starting conversation with" + dialogue.name);
-     }
-       
+    public string name;
+
+    [TextArea(3,10)]
+    public string[] sentences;
 }

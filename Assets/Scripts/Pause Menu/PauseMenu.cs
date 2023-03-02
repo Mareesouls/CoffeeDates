@@ -2,34 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour 
-public class static bool GameIsPaused = false;
+//public class PauseMenu : MonoBehaviour 
+//public class static bool GameIsPaused = false;
 
-{
-void Update()
-{
-    if (Input.GetKeyDown(KeyCode.Escape))
-    {
-        if (GameIsPaused)
-        {
-            Resume();
-        }
-        else
-        {
-            Pause();
-        }
-    }
-}
-void Resume()
-{
+//{
+//void Update()
+//{
+  //  if (Input.GetKeyDown(KeyCode.Escape))
+  //  {
+  //      if (GameIsPaused)
+ //       {
+  //          Resume();
+  //      }
+  //      else
+  //      {
+  //          Pause();
+  //      }
+ //   }
+// }
+//  void Resume()
+// {
 
-}
-void Pause()
-{
-pauseMenuUI.SetActive(true);
-Time.timeScale=0f;
-}
-}
+// }
+// void Pause()
+// {
+// pauseMenuUI.SetActive(true);
+// Time.timeScale=0f;
+//}
+//}
 
 // {
 // public static bool GameIsPaused = false;
