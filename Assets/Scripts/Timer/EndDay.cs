@@ -14,8 +14,10 @@ public class EndDay : MonoBehaviour
 
     public void GoingHome()
     {
+		//Accesses bool from DayTimer script to see if it's true. If the day is finished continues this if statement, else says the day isn't over.
         if (dF.dayFinished == true)
         {	
+			//Checking if a customer is present, will only let you change to the Home scene if there isn't one present (even if the timer has run out!). Otherwise prompts you to finish with your customer first.
 			if(cP.customerPresent == false)
 			{
 			SceneManager.LoadScene(5);

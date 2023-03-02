@@ -16,63 +16,67 @@ public class SC_CustomerSpawner : MonoBehaviour
 
     //dialogue when customer spawns
     //reference the whole panel
-    public GameObject dialoguePanel;
-    public Text dialogueText;
+    //  public GameObject dialoguePanel;
+    // public Text dialogueText;
     //contain sentences
-    public string[] dialogue;
+    //public string[] dialogue;
     //find position in the string
-    private int index;
+    //  private int index;
 
-    public float wordSpeed;
+    // public float wordSpeed;
 
-    public void OnSpawnPrefab()
-    {    
+    IEnumerator CustomerSpawning()
+    {
+        while (true)
+        {
             Instantiate(CUS_SPRT, spawnPosition, Quaternion.identity);
-        
-    }
-
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            if (dialoguePanel.activeInHierarchy)
-            {
-                zeroText();
-            }
-            else
-            {
-                dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
-            }
+            //define your list of actions here
         }
+        yield break;
     }
 
-    public void zeroText()
-    {
-        dialogueText.text = "";
-        index = 0;
-        dialoguePanel.SetActive(false);
-    } 
+// void Update()
+//{
+  //  if(Input.GetKeyDown(KeyCode.E))
+  //  {
+    //    if (dialoguePanel.activeInHierarchy)
+      //  {
+  //          zeroText();
+    ///    }
+       // else
+     //   {
+   //         dialoguePanel.SetActive(true);
+//            StartCoroutine(Typing());
+   //     }
+  //  }
+//}
 
-    IEnumerator Typing()
-    {
-        foreach(char letter in dialogue[index].ToCharArray())
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(wordSpeed);
-        }
-    }
+//public void zeroText()
+//{
+ //   dialogueText.text = "";
+ //   index = 0;
+ //   dialoguePanel.SetActive(false);
+//} 
 
-    public void NextLine()
-    {
-        if(index< dialogue.Length - 1)
-        {
-            index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
-        }
-    }
+//IEnumerator Typing()
+//{
+ //   foreach(char letter in dialogue[index].ToCharArray())
+ //   {
+  //      dialogueText.text += letter;
+ //       yield return new WaitForSeconds(wordSpeed);
+ //   }
+//}
 
+//public void NextLine()
+//{
+ //   if(index< dialogue.Length - 1)
+  //  {
+  //      index++;
+  //      dialogueText.text = "";
+  //      StartCoroutine(Typing());
+ //   }
+//}
+//
 
    // if CurTimer =< 0 && 
 
