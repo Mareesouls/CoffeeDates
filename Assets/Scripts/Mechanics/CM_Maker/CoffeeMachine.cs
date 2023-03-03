@@ -61,8 +61,15 @@ public class CoffeeMachine : MonoBehaviour
 
     public void MilkButton()
     {
-        print("Milk is added");
-        milk++;
+        if (milk<maxIngreadients)
+        {
+            print("Milk is added");
+            milk++;
+        }
+        else
+        {
+            print("You can not add anymore!!!");
+        }
     }
 
     public void Reset()
