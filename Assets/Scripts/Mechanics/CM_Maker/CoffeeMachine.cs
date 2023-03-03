@@ -113,7 +113,35 @@ public class CoffeeMachine : MonoBehaviour
             coffeeMade = true;
             baristaCoffeeID = 1;
         }
-
     }
 
+    void Doppio()
+    {
+        if (water == 0 && sugar == 0 && coffee == 2 && milk == 0 && !coffeeMade)
+        {
+            print("You made Doppio");
+            coffeeMade = true;
+            baristaCoffeeID = 2;
+        }
+    }
+
+    void Latte()
+    {
+        if (water == 0 && coffee == 1 && milk == 2 && !coffeeMade)
+        {
+            print("You made Latte");
+            coffeeMade = true;
+            baristaCoffeeID = 2;
+        }
+    }
+
+    void FlatWhite()
+    {
+        if (water == 0 && coffee == 1 && milk == 1 && !coffeeMade)
+        {
+            print("You made FlatWhite");
+            coffeeMade = true;
+            baristaCoffeeID = 1;
+        }
+    }
 }
