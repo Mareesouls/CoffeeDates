@@ -9,11 +9,12 @@ public class DrinkSelect : MonoBehaviour
     int sugar;
     int coffee;
     int milk;
-
+    public CoffeeMachine coffeemachine;
+    public int baristaCoffeeID = 0;
 
     public void GetStats()
     {
-
+        print("Get Stats");
     }
 
 
@@ -23,33 +24,49 @@ public class DrinkSelect : MonoBehaviour
         Espresso();
     }
 
+    public void ServingDrink()
+    {
+        
+    }
 
-    void Espresso()
+
+     void Espresso()
     {
         if(water == 0 && sugar == 0 && coffee == 1 && milk == 0 && !coffeeMade)
         {
             print("You made Espresso");
             coffeeMade = true;
+            baristaCoffeeID = 1;
         }
-
     }
 
     void Doppio()
     {
-        if(water == 0 && sugar == 0 && coffee == 2 && milk == 0 && !coffeeMade)
+        if (water == 0 && sugar == 0 && coffee == 2 && milk == 0 && !coffeeMade)
         {
             print("You made Doppio");
             coffeeMade = true;
+            baristaCoffeeID = 2;
         }
     }
 
-    void Americano()
+    void Latte()
     {
-        if(water == 1  && coffee == 1 && !coffeeMade)
+        if (water == 0 && coffee == 1 && milk == 2 && !coffeeMade)
         {
-            print("You made Americano");
+            print("You made Latte");
             coffeeMade = true;
+            baristaCoffeeID = 2;
         }
     }
 
+    void FlatWhite()
+    {
+        if (water == 0 && coffee == 1 && milk == 1 && !coffeeMade)
+        {
+            print("You made FlatWhite");
+            coffeeMade = true;
+            baristaCoffeeID = 1;
+        }
+    }
 }
