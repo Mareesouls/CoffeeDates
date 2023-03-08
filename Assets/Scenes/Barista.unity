@@ -391,6 +391,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137625404}
   m_CullTransparentMesh: 1
+--- !u!1 &310464811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310464814}
+  - component: {fileID: 310464813}
+  - component: {fileID: 310464812}
+  m_Layer: 0
+  m_Name: CoffeeMaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &310464812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310464811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3ab2165be1bb24fb9bf726a135e398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  served: 0
+  customerRequest: 0
+  baristaCoffee: 0
+--- !u!114 &310464813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310464811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a9631f5e9c8ba4eb86c35e56fa756f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tippingmachine: {fileID: 310464812}
+  coffee: 0
+  baristaCoffeeID: 0
+--- !u!4 &310464814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310464811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 516.82654, y: 314.42142, z: -3.499876}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &318981310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1797751343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1624,11 +1687,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CUS_SPRT: {fileID: 247754095207214608, guid: 1be6d1c5dd833dc468efd6529d9b5276, type: 3}
   spawnPosition: {x: 0, y: 0}
-  dialoguePanel: {fileID: 1797751342}
-  dialogueText: {fileID: 0}
-  dialogue:
-  - Hello, I'd like a coffee please.
-  wordSpeed: 0.06
 --- !u!1 &2068942737
 GameObject:
   m_ObjectHideFlags: 0

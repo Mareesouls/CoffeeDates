@@ -12,12 +12,13 @@ public class TippingMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        customerRequest = 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Check if served is true, probably gonna remove this later on
         if (served == true)
         {
             CompareRequest();
@@ -25,6 +26,7 @@ public class TippingMachine : MonoBehaviour
 
     }
 
+    //Compare the CoffeeID of what was served and what was requested
     void CompareRequest()
     {
         if(customerRequest==baristaCoffee)
