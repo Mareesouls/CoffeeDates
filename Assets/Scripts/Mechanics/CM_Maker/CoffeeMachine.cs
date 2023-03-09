@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class CoffeeMachine : MonoBehaviour
 {
-    public TippingMachine tippingmachine;
+    public GameObject popUpText;
+    public GameObject servePU;
+    public TippingMachine tippingMachine;
+    public DrinkSelect drinkSelect;
     int water = 0;
     int sugar = 0;
     public int coffee = 0;
     int milk = 0;
-    int maxIngreadients = 6;
+    int maxIngreadients = 3;
     bool coffeeMade = false;
-    public int baristaCoffeeID = 0;
+
 
     //Check what coffee is made
     void CoffeeComplete()
     {
-        Espresso(); 
+        popUpText.SetActive(true);
+        drinkSelect.GetStats();
+        drinkSelect.SelectDrink();
+        coffeeMade = true;
     }
 
     //button functions
@@ -92,56 +98,16 @@ public class CoffeeMachine : MonoBehaviour
     //Serve sends the data from the barista to the tippingmachines
     public void Serve()
     {
-        coffeeMade = false;
-        if(baristaCoffeeID==0)
+        servePU.SetActive(true);
+        if(coffeeMade == false)
         {
             print("You must have something to serve!");
         }
         else
         {
-            tippingmachine.baristaCoffee = baristaCoffeeID;
-            tippingmachine.served = true;
+            drinkSelect.ServingDrink();
+            tippingMachine.CompareRequest();
         }
     }
 
-    //Drink selection
-    void Espresso()
-    {
-        if(water == 0 && sugar == 0 && coffee == 1 && milk == 0 && !coffeeMade)
-        {
-            print("You made Espresso");
-            coffeeMade = true;
-            baristaCoffeeID = 1;
-        }
-    }
-
-    void Doppio()
-    {
-        if (water == 0 && sugar == 0 && coffee == 2 && milk == 0 && !coffeeMade)
-        {
-            print("You made Doppio");
-            coffeeMade = true;
-            baristaCoffeeID = 2;
-        }
-    }
-
-    void Latte()
-    {
-        if (water == 0 && coffee == 1 && milk == 2 && !coffeeMade)
-        {
-            print("You made Latte");
-            coffeeMade = true;
-            baristaCoffeeID = 2;
-        }
-    }
-
-    void FlatWhite()
-    {
-        if (water == 0 && coffee == 1 && milk == 1 && !coffeeMade)
-        {
-            print("You made FlatWhite");
-            coffeeMade = true;
-            baristaCoffeeID = 1;
-        }
-    }
 }
