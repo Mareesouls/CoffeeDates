@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoffeeMachine : MonoBehaviour
 {
+    public TMP_Text text;
     public GameObject popUpText;
     public GameObject servePU;
     public TippingMachine tippingMachine;
@@ -32,6 +34,7 @@ public class CoffeeMachine : MonoBehaviour
         {
             print("Coffee is added");
             coffee++;
+            text.text = "Coffee is added";
         }
         else
         {

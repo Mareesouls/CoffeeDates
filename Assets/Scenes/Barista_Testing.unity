@@ -1227,6 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a9631f5e9c8ba4eb86c35e56fa756f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 40029246}
   popUpText: {fileID: 444892906}
   servePU: {fileID: 1912103962}
   tippingMachine: {fileID: 1126133673}
