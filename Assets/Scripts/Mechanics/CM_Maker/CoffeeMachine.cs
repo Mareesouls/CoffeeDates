@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoffeeMachine : MonoBehaviour
 {
+    public TMP_Text text;
     public GameObject popUpText;
+    //PU = Pop up (I will rename this later
     public GameObject servePU;
     public TippingMachine tippingMachine;
     public DrinkSelect drinkSelect;
-    int water = 0;
-    int sugar = 0;
+    public int water = 0;
+    public int sugar = 0;
     public int coffee = 0;
-    int milk = 0;
+    public int milk = 0;
     int maxIngreadients = 3;
     bool coffeeMade = false;
+    public CustomerSpawner customerSpawner;
 
 
     //Check what coffee is made
@@ -32,10 +36,12 @@ public class CoffeeMachine : MonoBehaviour
         {
             print("Coffee is added");
             coffee++;
+            text.text = "Coffee is added";
         }
         else
         {
             print("You can not add anymore!!!");
+            text.text = "You can not add anymore!!!";
         }
     }
 
@@ -45,10 +51,12 @@ public class CoffeeMachine : MonoBehaviour
         {
             print("sugar is added");
             sugar++;
+            text.text = "Sugar is added";
         }
         else
         {
             print("You can not add anymore!!!");
+            text.text = "You can not add anymore!!!";
         }
     }
 
@@ -58,10 +66,12 @@ public class CoffeeMachine : MonoBehaviour
         {
             print("Water is added");
             water++;
+            text.text = "Water is added";
         }
         else
         {
             print("You can not add anymore!!!");
+            text.text = "You can not add anymore!!!";
         }
     }
 
@@ -71,16 +81,19 @@ public class CoffeeMachine : MonoBehaviour
         {
             print("Milk is added");
             milk++;
+            text.text = "Milk is added";
         }
         else
         {
             print("You can not add anymore!!!");
+            text.text = "You can not add anymore!!!";
         }
     }
 
     public void Reset()
     {
         print("Reset!");
+        text.text = "The Coffee Machine has now reset";
         sugar = 0;
         milk = 0;
         water = 0;
@@ -107,6 +120,7 @@ public class CoffeeMachine : MonoBehaviour
         {
             drinkSelect.ServingDrink();
             tippingMachine.CompareRequest();
+            customerSpawner.customerExist = false;
         }
     }
 

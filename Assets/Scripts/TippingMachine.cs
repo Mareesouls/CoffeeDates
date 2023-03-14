@@ -7,6 +7,8 @@ public class TippingMachine : MonoBehaviour
     public bool served = false;
     public int customerRequest;
     public int baristaCoffee;
+    public int tippingAmount;
+    public int totalTippingAmount;
 
     
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class TippingMachine : MonoBehaviour
         if(customerRequest==baristaCoffee)
         {
             print("You made the correct drink, well done.");
+            totalTippingAmount = +tippingAmount;
         }
         else
         {

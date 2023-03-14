@@ -9,12 +9,17 @@ public class DrinkSelect : MonoBehaviour
     int sugar;
     int coffee;
     int milk;
-    public CoffeeMachine coffeemachine;
+    public CoffeeMachine coffeeMachine;
     public int baristaCoffeeID = 0;
 
     public void GetStats()
     {
         print("Get Stats");
+        water = coffeeMachine.water;
+        sugar = coffeeMachine.sugar;
+        coffee = coffeeMachine.coffee;
+        milk = coffeeMachine.milk;
+
     }
 
 
@@ -22,6 +27,11 @@ public class DrinkSelect : MonoBehaviour
     public void SelectDrink()
     {
         Espresso();
+        Doppio();
+        Americano();
+        Latte();
+        FlatWhite();
+        WeirdCoffee();
     }
 
     public void ServingDrink()
@@ -50,13 +60,23 @@ public class DrinkSelect : MonoBehaviour
         }
     }
 
+    void Americano()
+    {
+        if (water == 0 && coffee == 1 && milk == 2 && !coffeeMade)
+        {
+            print("You made Americano");
+            coffeeMade = true;
+            baristaCoffeeID = 3;
+        }
+    }
+
     void Latte()
     {
         if (water == 0 && coffee == 1 && milk == 2 && !coffeeMade)
         {
             print("You made Latte");
             coffeeMade = true;
-            baristaCoffeeID = 2;
+            baristaCoffeeID = 4;
         }
     }
 
@@ -66,7 +86,14 @@ public class DrinkSelect : MonoBehaviour
         {
             print("You made FlatWhite");
             coffeeMade = true;
-            baristaCoffeeID = 1;
+            baristaCoffeeID = 5;
         }
+    }
+
+    void WeirdCoffee() 
+    {
+        print("That item is not on the menu");
+        baristaCoffeeID = 100;
+        coffeeMade = true;
     }
 }
