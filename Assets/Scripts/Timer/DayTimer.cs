@@ -22,7 +22,7 @@ public class DayTimer : MonoBehaviour
         //When timer is active and the time is greater than 0, tics down.
         if (timerActive == true && secondsLeft > 0)
             {
-                print("start");
+                print(secondsLeft);
                 secondsLeft -= Time.deltaTime;
             }
         //When timerhits 0, turns the bool to false and sets the dayFinished bool to true
@@ -30,7 +30,7 @@ public class DayTimer : MonoBehaviour
                 {
                 dayFinished = true;
                 timerActive = false;    
-                print("finish");
+                //print("finish");
                 }
         }
 }

@@ -6,18 +6,25 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour 
 {
     public GameObject CustomerPrefab;
-    public float NextCustomer = 7f;
+    public float NextCustomer;
+    public bool customerExist=false;
+    public DialoguBoxManager dialoguBoxManager;
 
     void Start()
     {
+        NextCustomer = 1;
         StartCoroutine(OpenStore());
     }
 
 
     private void SpawnCustomer()
     {
-        GameObject a = Instantiate(CustomerPrefab, transform.position, Quaternion.identity);
-        a.transform.position = new Vector3( -0.44f, 0.3f, -0.09f);
+        if (customerExist == false)
+        {
+            GameObject a = Instantiate(CustomerPrefab, transform.position, Quaternion.identity);
+            a.transform.position = new Vector3(-0.44f, 0.3f, -0.09f);
+            //NextCustomer = random.range(3,5)
+        }
     }
 
     IEnumerator OpenStore()

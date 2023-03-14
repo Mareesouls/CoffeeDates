@@ -11,8 +11,8 @@ public class PopUpText : MonoBehaviour
     //fades out after 2 seconds upon active
     void OnEnable()
     {
-        waitTime = 1;
-        fadeOutTime = 2;
+        waitTime = 3;
+        //fadeOutTime = 2;
         StartCoroutine(PopUpTime());
     }
 
