@@ -7,12 +7,12 @@ public class CustomerSpawner : MonoBehaviour
 {
     public GameObject CustomerPrefab;
     public float NextCustomer;
-    bool customerExist=false;
+    public bool customerExist=false;
     public DialoguBoxManager dialoguBoxManager;
 
     void Start()
     {
-        NextCustomer = 5;
+        NextCustomer = 1;
         StartCoroutine(OpenStore());
     }
 

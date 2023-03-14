@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialoguBoxManager : MonoBehaviour
 {
-
+    public GameObject dialogueBox;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +19,13 @@ public class DialoguBoxManager : MonoBehaviour
         
     }
 
-    void ShowTextBox()
-    { 
-        
+    public void ShowTextBox()
+    {
+        dialogueBox.SetActive(true);
+    }
+
+    public void HideTextBox()
+    {
+        dialogueBox.SetActive(false);
     }
 }
