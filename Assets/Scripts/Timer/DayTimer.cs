@@ -12,14 +12,18 @@ public class DayTimer : MonoBehaviour
     public CustomerSpawner customerSpawner;
     public TMP_Text text;
     public GameObject endShiftButton;
+    bool shiftStarted=false;
+
 
     public void DayStart()
         {
-            customerSpawner.StartOfShift();
+        customerSpawner.StartOfShift();
         //Activates the timer on button click by setting the bool to true.
         timerActive = true;
         //This line can make a set timer for all levels, commented out for now so we can just change the public variable in engine for testing purposes
         secondsLeft = 5*60;
+        //secondsLeft = 2;
+        shiftStarted = true;
         }
 
     public void Update()
@@ -31,7 +35,7 @@ public class DayTimer : MonoBehaviour
                 secondsLeft -= Time.deltaTime;
             }
         //When timerhits 0, turns the bool to false and sets the dayFinished bool to true
-        if (secondsLeft <= 0)
+        if (secondsLeft <= 0 && shiftStarted)
                 {
                 dayFinished = true;
                 timerActive = false;    

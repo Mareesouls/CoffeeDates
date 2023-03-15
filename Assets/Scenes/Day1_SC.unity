@@ -4443,8 +4443,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2124043433}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 1
+        m_MethodName: Home
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
