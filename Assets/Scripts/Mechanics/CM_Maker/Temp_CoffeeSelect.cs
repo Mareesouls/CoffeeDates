@@ -5,6 +5,8 @@ using TMPro;
 
 public class Temp_CoffeeSelect : MonoBehaviour
 {
+    // This Script is only a temporary solution to display orders from customer.
+    
     public TippingMachine tippingMachine;
     public TMP_Text dialogueText;
     public TMP_Text requestText;
@@ -19,6 +21,7 @@ public class Temp_CoffeeSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    
         if (tippingMachine.customerRequest>0) 
         {
             if (tippingMachine.customerRequest == 1) 
