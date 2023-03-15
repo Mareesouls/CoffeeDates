@@ -9,8 +9,9 @@ public class CustomerSpawner : MonoBehaviour
     public float NextCustomer;
     public bool customerExist=false;
     public DialoguBoxManager dialoguBoxManager;
+    public bool timerEnd=false;
 
-    void Start()
+    public void StartOfShift()
     {
         NextCustomer = 1;
         StartCoroutine(OpenStore());
@@ -19,11 +20,14 @@ public class CustomerSpawner : MonoBehaviour
 
     private void SpawnCustomer()
     {
-        if (customerExist == false)
+        if (customerExist == false && timerEnd == false)
         {
             GameObject a = Instantiate(CustomerPrefab, transform.position, Quaternion.identity);
             a.transform.position = new Vector3(-0.44f, 0.3f, -0.09f);
             //NextCustomer = random.range(3,5)
+        }else
+        {
+            dialoguBoxManager.HideTextBox();
         }
     }
 

@@ -9,6 +9,7 @@ public class TippingMachine : MonoBehaviour
     public int baristaCoffee;
     public int tippingAmount;
     public int totalTippingAmount;
+    public GameObject customer;
 
     
     // Start is called before the first frame update
@@ -35,5 +36,7 @@ public class TippingMachine : MonoBehaviour
         {
             print("Whoops, wrong drink");
         }
+        customer = GameObject.Find("CUS_SPRT(Clone)");
+        Destroy(customer);
     }
 }
