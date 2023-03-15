@@ -34,12 +34,14 @@ public class CoffeeMachine : MonoBehaviour
     {
         if (coffee<maxIngreadients)
         {
+            //change the coffee and the coffee machine text 
             print("Coffee is added");
             coffee++;
             text.text = "Coffee is added";
         }
         else
         {
+            //don't do anything and inform player that they can not add any more
             print("You can not add anymore!!!");
             text.text = "You can not add anymore!!!";
         }
@@ -92,6 +94,7 @@ public class CoffeeMachine : MonoBehaviour
 
     public void Reset()
     {
+        //BY FIRE BE PURGED!!!
         print("Reset!");
         text.text = "The Coffee Machine has now reset";
         sugar = 0;

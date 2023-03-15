@@ -15,7 +15,8 @@ public class Customer : MonoBehaviour
     void Awake()
     {
         print("customer has arrived");
-        //Prefab references
+        //Prefab references (Prefabs can not store references so i'm using GameObject.Find)
+        //However this also means that we need to maintain the same GameManager and CoffeeMaker accross all levels
         customerSpawner = GameObject.Find("GameManager").GetComponent<CustomerSpawner>();
         customerSpawner.customerExist = true;
         desiredCoffee = Random.Range(1, 5);
@@ -31,12 +32,16 @@ public class Customer : MonoBehaviour
 
     void RequestDrink()
     {
+        //update tippingMachine what order the customer desires
+        //This function will also expand in pahse 2 of Coffee Date
         tippingMachine.customerRequest = desiredCoffee;
     }
 
     void TippingAmount() 
     {
+        //The amount of tips the player will recieve if coffee done right
         tippingMachine.tippingAmount = customerTip;
+        //this stat is declared in awake
     }
 
 

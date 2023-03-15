@@ -20,12 +20,14 @@ public class CustomerSpawner : MonoBehaviour
 
     private void SpawnCustomer()
     {
+        //Only spawn cutomer when no customer is in line and the timer has not ended
         if (customerExist == false && timerEnd == false)
         {
             GameObject a = Instantiate(CustomerPrefab, transform.position, Quaternion.identity);
             a.transform.position = new Vector3(-0.44f, 0.3f, -0.09f);
             //NextCustomer = random.range(3,5)
         }else
+        //If there is no customer and also shift has not started then the dialogueBox remain hidden.
         {
             dialoguBoxManager.HideTextBox();
         }
