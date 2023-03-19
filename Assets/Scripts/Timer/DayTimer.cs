@@ -12,7 +12,7 @@ public class DayTimer : MonoBehaviour
     public CustomerSpawner customerSpawner;
     public TMP_Text text;
     public GameObject endShiftButton;
-    bool shiftStarted=false;
+    public bool shiftStarted=false;
 
 
     public void DayStart()
