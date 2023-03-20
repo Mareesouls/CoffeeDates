@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialoguBoxManager : MonoBehaviour
 {
     public GameObject dialogueBox;
-    public DayTimer timer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +17,7 @@ public class DialoguBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer.shiftStarted==false)
-        {
-            HideTextBox();
-        }
+
     }
 
     public void ShowTextBox()
