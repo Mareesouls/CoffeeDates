@@ -8873,10 +8873,6 @@ MonoBehaviour:
   servePU: {fileID: 718211915}
   tippingMachine: {fileID: 1734242525}
   drinkSelect: {fileID: 1734242528}
-  water: 0
-  sugar: 0
-  coffee: 0
-  milk: 0
   customerSpawner: {fileID: 1687758348}
 --- !u!4 &1734242527
 Transform:
@@ -8905,8 +8901,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7250dfa99907a4c99cc6e198740970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: 0
+  sugar: 0
+  coffee: 0
+  milk: 0
   coffeeMachine: {fileID: 1734242526}
   baristaCoffeeID: 0
+  completeCoffeeText: {fileID: 2135569028}
 --- !u!114 &1734242529
 MonoBehaviour:
   m_ObjectHideFlags: 0

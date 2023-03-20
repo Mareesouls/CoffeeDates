@@ -11,10 +11,6 @@ public class CoffeeMachine : MonoBehaviour
     public GameObject servePU;
     public TippingMachine tippingMachine;
     public DrinkSelect drinkSelect;
-    public int water = 0;
-    public int sugar = 0;
-    public int coffee = 0;
-    public int milk = 0;
     int maxIngreadients = 3;
     bool coffeeMade = false;
     public CustomerSpawner customerSpawner;
@@ -24,7 +20,6 @@ public class CoffeeMachine : MonoBehaviour
     void CoffeeComplete()
     {
         popUpText.SetActive(true);
-        drinkSelect.GetStats();
         drinkSelect.SelectDrink();
         coffeeMade = true;
     }
@@ -32,11 +27,11 @@ public class CoffeeMachine : MonoBehaviour
     //button functions
     public void CoffeeButton()
     {
-        if (coffee<maxIngreadients)
+        if (drinkSelect.coffee<maxIngreadients)
         {
             //change the coffee and the coffee machine text 
             print("Coffee is added");
-            coffee++;
+            drinkSelect.coffee++;
             text.text = "Coffee is added";
         }
         else
@@ -49,10 +44,10 @@ public class CoffeeMachine : MonoBehaviour
 
     public void SugarButton()
     {
-         if (sugar<maxIngreadients)
+         if (drinkSelect.sugar<maxIngreadients)
         {
             print("sugar is added");
-            sugar++;
+            drinkSelect.sugar++;
             text.text = "Sugar is added";
         }
         else
@@ -64,10 +59,10 @@ public class CoffeeMachine : MonoBehaviour
 
     public void WaterButton()
     {
-         if (water<maxIngreadients)
+         if (drinkSelect.water<maxIngreadients)
         {
             print("Water is added");
-            water++;
+            drinkSelect.water++;
             text.text = "Water is added";
         }
         else
@@ -79,10 +74,10 @@ public class CoffeeMachine : MonoBehaviour
 
     public void MilkButton()
     {
-        if (milk<maxIngreadients)
+        if (drinkSelect.milk<maxIngreadients)
         {
             print("Milk is added");
-            milk++;
+            drinkSelect.milk++;
             text.text = "Milk is added";
         }
         else
@@ -97,10 +92,10 @@ public class CoffeeMachine : MonoBehaviour
         //BY FIRE BE PURGED!!!
         print("Reset!");
         text.text = "The Coffee Machine has now reset";
-        sugar = 0;
-        milk = 0;
-        water = 0;
-        coffee = 0;
+        drinkSelect.sugar = 0;
+        drinkSelect.milk = 0;
+        drinkSelect.water = 0;
+        drinkSelect.coffee = 0;
     }
 
     //Starts Coffee Complete and inform the player that the coffee is done.
