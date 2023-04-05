@@ -11,7 +11,7 @@ public class CoffeeMachine : MonoBehaviour
     public GameObject servePU;
     public TippingMachine tippingMachine;
     public DrinkSelect drinkSelect;
-    int maxIngreadients = 3;
+    int maxIngredients = 3;
     bool coffeeMade = false;
     public CustomerSpawner customerSpawner;
 
@@ -27,7 +27,7 @@ public class CoffeeMachine : MonoBehaviour
     //button functions
     public void CoffeeButton()
     {
-        if (drinkSelect.coffee<maxIngreadients)
+        if (drinkSelect.coffee<maxIngredients)
         {
             //change the coffee and the coffee machine text 
             print("Coffee is added");
@@ -44,7 +44,7 @@ public class CoffeeMachine : MonoBehaviour
 
     public void SugarButton()
     {
-         if (drinkSelect.sugar<maxIngreadients)
+         if (drinkSelect.sugar<maxIngredients)
         {
             print("sugar is added");
             drinkSelect.sugar++;
@@ -59,7 +59,7 @@ public class CoffeeMachine : MonoBehaviour
 
     public void WaterButton()
     {
-         if (drinkSelect.water<maxIngreadients)
+         if (drinkSelect.water<maxIngredients)
         {
             print("Water is added");
             drinkSelect.water++;
@@ -74,7 +74,7 @@ public class CoffeeMachine : MonoBehaviour
 
     public void MilkButton()
     {
-        if (drinkSelect.milk<maxIngreadients)
+        if (drinkSelect.milk<maxIngredients)
         {
             print("Milk is added");
             drinkSelect.milk++;
