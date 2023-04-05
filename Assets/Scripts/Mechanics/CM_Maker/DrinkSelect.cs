@@ -34,6 +34,7 @@ public class DrinkSelect : MonoBehaviour
         coffee=0;
         milk=0;
         coffeeMade=false;
+        completeCoffeeText.text = "Coffee Made: ";
     }
 
 
