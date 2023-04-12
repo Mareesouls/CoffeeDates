@@ -3206,6 +3206,7 @@ GameObject:
   - component: {fileID: 586395775}
   - component: {fileID: 586395774}
   - component: {fileID: 586395773}
+  - component: {fileID: 586395776}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -3278,14 +3279,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1717528163}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
-        m_Mode: 1
+      - m_Target: {fileID: 586395776}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: MoveToScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3328,6 +3329,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586395771}
   m_CullTransparentMesh: 1
+--- !u!114 &586395776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586395771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40f64bcc9a44a74181f8b96d2719c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612191053
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,9 +4557,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 754603228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cce5c2dfd90deb4f9c91bd63d553c66, type: 3}
+  m_Script: {fileID: 11500000, guid: 3daafaad25eca884796ef1c68e45a237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLabel: {fileID: 0}
 --- !u!1 &755011173
 GameObject:
   m_ObjectHideFlags: 0
@@ -9215,6 +9229,7 @@ GameObject:
   - component: {fileID: 1593982103}
   - component: {fileID: 1593982105}
   - component: {fileID: 1593982104}
+  - component: {fileID: 1593982106}
   m_Layer: 5
   m_Name: NPCDialogue
   m_TagString: Untagged
@@ -9341,6 +9356,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593982102}
   m_CullTransparentMesh: 1
+--- !u!114 &1593982106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593982102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3daafaad25eca884796ef1c68e45a237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textLabel: {fileID: 1593982104}
 --- !u!1 &1615705176
 GameObject:
   m_ObjectHideFlags: 0
