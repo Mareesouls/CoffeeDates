@@ -13,7 +13,9 @@ public class DayTimer : MonoBehaviour
     public TMP_Text text;
     public GameObject endShiftButton;
     public bool shiftStarted=false;
-
+    public float specialEventTimer;
+    //this value below is only used for display purposes, do not use in any other scenarios
+    public int minutesLeft;
 
     public void DayStart()
         {
@@ -24,15 +26,24 @@ public class DayTimer : MonoBehaviour
         //secondsLeft = 5*60;
         secondsLeft = 2;
         shiftStarted = true;
+        //Special event is different each day, at the start of the script it is randomly decided what time the event will happen
+        //The special event will alway have at minimum 2 minutes for the player to interact
+        specialEventTimer = Random.Range(20,(secondsLeft-20-120));
+        print(specialEventTimer);
         }
 
-    public void Update()
+    public void FixedUpdate()
         {
         //When timer is active and the time is greater than 0, tics down.
         if (timerActive == true && secondsLeft > 0)
             {
-                text.text = "Time Left: "+ (secondsLeft).ToString();
+                minutesLeft = Mathf.FloorToInt(secondsLeft/60);
+                text.text = "Time Left: "+ minutesLeft.ToString()+":"+((Mathf.FloorToInt(secondsLeft))-(minutesLeft*60)).ToString();
                 secondsLeft -= Time.deltaTime;
+                if(secondsLeft == specialEventTimer)
+                {
+                    SpecialEvent();
+                }
             }
         //When timerhits 0, turns the bool to false and sets the dayFinished bool to true
         if (secondsLeft <= 0 && shiftStarted)
@@ -45,4 +56,10 @@ public class DayTimer : MonoBehaviour
                 //print("finish");
                 }
         }
+
+    void SpecialEvent()
+    {
+        print("Datable character has apearred");
+    }
+
 }
