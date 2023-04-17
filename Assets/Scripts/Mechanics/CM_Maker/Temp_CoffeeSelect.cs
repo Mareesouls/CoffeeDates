@@ -26,7 +26,7 @@ public class Temp_CoffeeSelect : MonoBehaviour
         {
             if (tippingMachine.customerRequest == 1) 
             {
-                dialogueText.text = "I would like to order an Espresso";
+                dialogueText.text = "I would like to order a Expresso";
                 requestText.text = "Coffee Requested: Espresso";
             }
             else if(tippingMachine.customerRequest == 2)
