@@ -578,7 +578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648385ee2d34a7140901c41427eb86b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUp: {fileID: 135912545}
 --- !u!114 &135912549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4523,7 +4522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648385ee2d34a7140901c41427eb86b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUp: {fileID: 718211915}
 --- !u!114 &718211918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11364,6 +11362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968059423}
   - component: {fileID: 1968059422}
+  - component: {fileID: 1968059424}
   m_Layer: 0
   m_Name: BackgoundMusic
   m_TagString: Untagged

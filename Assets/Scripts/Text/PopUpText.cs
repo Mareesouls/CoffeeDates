@@ -11,7 +11,7 @@ public class PopUpText : MonoBehaviour
     //fades out after 2 seconds upon active
     void OnEnable()
     {
-        waitTime = 3;
+        waitTime = 2;
         //fadeOutTime = 2;
         StartCoroutine(PopUpTime());
     }
@@ -23,6 +23,7 @@ public class PopUpText : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
             //FadeOut();
             popUp.SetActive(false);
+            print("Pop up disabled");
         }
         yield break;
     }

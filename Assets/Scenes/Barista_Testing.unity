@@ -3610,7 +3610,7 @@ RectTransform:
   - {fileID: 470706932}
   - {fileID: 893002501}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3956,7 +3956,7 @@ GameObject:
   - component: {fileID: 791542515}
   - component: {fileID: 791542514}
   m_Layer: 5
-  m_Name: Serve
+  m_Name: Serve PopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4026,13 +4026,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 428819886}
-  m_Father: {fileID: 1149885674}
-  m_RootOrder: 8
+  m_Father: {fileID: 1151500241}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
-  m_SizeDelta: {x: -400, y: -700}
+  m_AnchoredPosition: {x: 0, y: 59.456604}
+  m_SizeDelta: {x: -400, y: -261.1327}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &810783144
 GameObject:
@@ -4047,7 +4047,7 @@ GameObject:
   - component: {fileID: 810783147}
   - component: {fileID: 810783146}
   m_Layer: 5
-  m_Name: Serve
+  m_Name: Serve Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4067,7 +4067,7 @@ RectTransform:
   m_Children:
   - {fileID: 12003075}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -4118,30 +4118,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2113774452}
-        m_TargetAssemblyTypeName: CoffeeMachine, Assembly-CSharp
-        m_MethodName: Serve
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 810783146}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: set_interactable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1660942792}
         m_TargetAssemblyTypeName: ButtonFeedback, Assembly-CSharp
         m_MethodName: ResetIngredients
@@ -4189,6 +4165,78 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 810783146}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1895968689}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1895968688}
+        m_TargetAssemblyTypeName: CAMChange, Assembly-CSharp
+        m_MethodName: CameraChanger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1450401286}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1151500240}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2113774452}
+        m_TargetAssemblyTypeName: CoffeeMachine, Assembly-CSharp
+        m_MethodName: Serve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &810783147
 MonoBehaviour:
@@ -5966,7 +6014,7 @@ RectTransform:
   - {fileID: 233319873}
   - {fileID: 871438197}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -6277,6 +6325,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1895968687}
   - {fileID: 1660942788}
   - {fileID: 1748696856}
   - {fileID: 2093751150}
@@ -6285,10 +6334,8 @@ RectTransform:
   - {fileID: 1797439577}
   - {fileID: 810783145}
   - {fileID: 1742518796}
-  - {fileID: 791542517}
   - {fileID: 549585615}
   - {fileID: 731427689}
-  - {fileID: 1895968687}
   - {fileID: 1851447891}
   - {fileID: 1867175885}
   - {fileID: 667863753}
@@ -6372,6 +6419,7 @@ RectTransform:
   - {fileID: 213469574}
   - {fileID: 1848254338}
   - {fileID: 1432350652}
+  - {fileID: 791542517}
   m_Father: {fileID: 939302756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8299,7 +8347,7 @@ RectTransform:
   - {fileID: 120022017}
   - {fileID: 163880343}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -8668,7 +8716,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8712,7 +8760,7 @@ RectTransform:
   - {fileID: 1038150763}
   - {fileID: 1901112659}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -9184,7 +9232,7 @@ RectTransform:
   m_Children:
   - {fileID: 1393690659}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -9246,18 +9294,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 810783146}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: set_interactable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1797439579
 MonoBehaviour:
@@ -9707,7 +9743,7 @@ RectTransform:
   m_Children:
   - {fileID: 2054190817}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -9785,7 +9821,7 @@ RectTransform:
   m_Children:
   - {fileID: 1215849777}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9939,6 +9975,8 @@ MonoBehaviour:
   text: {fileID: 137653186}
   endShiftButton: {fileID: 1432350648}
   shiftStarted: 0
+  specialEventTimer: 0
+  minutesLeft: 0
 --- !u!114 &1880214447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10153,7 +10191,7 @@ RectTransform:
   m_Children:
   - {fileID: 1829328402}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10483,18 +10521,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1151500240}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1450401286}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -10506,6 +10532,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1151500240}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 213469573}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -11512,7 +11550,7 @@ RectTransform:
   - {fileID: 1022414166}
   - {fileID: 1212076844}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -11736,6 +11774,7 @@ MonoBehaviour:
   coffeeMachine: {fileID: 2113774452}
   baristaCoffeeID: 0
   completeCoffeeText: {fileID: 389744588}
+  serveButton: {fileID: 810783146}
 --- !u!114 &2113774454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11752,8 +11791,8 @@ MonoBehaviour:
   customerRequest: 0
   baristaCoffee: 0
   tippingAmount: 0
-  totalTippingAmount: 0
   customer: {fileID: 0}
+  dialoguePannel: {fileID: 0}
 --- !u!114 &2113774455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11817,7 +11856,7 @@ RectTransform:
   m_Children:
   - {fileID: 1385456906}
   m_Father: {fileID: 1149885674}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}

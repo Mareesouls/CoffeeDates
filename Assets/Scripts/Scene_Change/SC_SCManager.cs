@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SC_SCManager : MonoBehaviour
 {
+    public void SCReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void SCSeatingArea()
     {
         SceneManager.LoadScene(3);

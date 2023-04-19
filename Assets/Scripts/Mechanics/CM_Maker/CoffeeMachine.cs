@@ -16,6 +16,7 @@ public class CoffeeMachine : MonoBehaviour
     public CustomerSpawner customerSpawner;
 
 
+
     //Check what coffee is made
     void CoffeeComplete()
     {
@@ -107,6 +108,7 @@ public class CoffeeMachine : MonoBehaviour
 
 
     //Serve sends the data from the barista to the tippingmachines
+    //This function is called from the Serve button in the Coffee machine camera.
     public void Serve()
     {
         servePU.SetActive(true);
@@ -116,6 +118,7 @@ public class CoffeeMachine : MonoBehaviour
         }
         else
         {
+            tippingMachine.baristaCoffee=drinkSelect.baristaCoffeeID;
             drinkSelect.ServingDrink();
             tippingMachine.CompareRequest();
             customerSpawner.customerExist = false;

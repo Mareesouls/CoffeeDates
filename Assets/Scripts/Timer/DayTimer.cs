@@ -23,8 +23,8 @@ public class DayTimer : MonoBehaviour
         //Activates the timer on button click by setting the bool to true.
         timerActive = true;
         //This line can make a set timer for all levels, commented out for now so we can just change the public variable in engine for testing purposes
-        //secondsLeft = 5*60;
-        secondsLeft = 2;
+        secondsLeft = 5*60;
+        //secondsLeft = 2;
         shiftStarted = true;
         //Special event is different each day, at the start of the script it is randomly decided what time the event will happen
         //The special event will alway have at minimum 2 minutes for the player to interact
