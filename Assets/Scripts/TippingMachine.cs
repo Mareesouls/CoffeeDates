@@ -33,21 +33,17 @@ public class TippingMachine : MonoBehaviour
         {
             print("You made the correct drink, well done.");
             totalTippingAmount = +tippingAmount;
-            if(customerRequest >= 0)
-            {
-                dialoguePannel.SetActive(true);
-            }
         }
         else
         {
             print(customerRequest+" and "+ baristaCoffee );
             print("Whoops, wrong drink");
-            if(customerRequest >= 0)
-            {
-                dialoguePannel.SetActive(true);
-            }
         }
-        customer = GameObject.Find("CUS_SPRT(Clone)");
+        customer = GameObject.FindGameObjectWithTag("Customer");
         Destroy(customer);
+        if (customerRequest >= 0)
+        {
+            dialoguePannel.SetActive(true);
+        }
     }
 }
