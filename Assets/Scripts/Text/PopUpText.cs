@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PopUpText : MonoBehaviour
 {   
-    public GameObject popUp;
+    /*public GameObject popUp;
     int fadeOutTime;
     int waitTime;
 

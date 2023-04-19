@@ -444,7 +444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648385ee2d34a7140901c41427eb86b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUp: {fileID: 135912545}
 --- !u!114 &135912549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4387,7 +4386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648385ee2d34a7140901c41427eb86b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUp: {fileID: 718211915}
 --- !u!114 &718211918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9645,6 +9643,8 @@ MonoBehaviour:
   text: {fileID: 195535267}
   endShiftButton: {fileID: 2095876508}
   shiftStarted: 0
+  specialEventTimer: 0
+  minutesLeft: 0
 --- !u!1 &1696798189
 GameObject:
   m_ObjectHideFlags: 0
@@ -10957,6 +10957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968059423}
   - component: {fileID: 1968059422}
+  - component: {fileID: 1968059424}
   m_Layer: 0
   m_Name: BackgoundMusic
   m_TagString: Untagged
@@ -11075,6 +11076,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1968059424
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968059421}
+  m_Enabled: 1
 --- !u!1 &1993639603
 GameObject:
   m_ObjectHideFlags: 0
