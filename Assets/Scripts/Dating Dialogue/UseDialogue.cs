@@ -15,7 +15,7 @@ public class UseDialogue : MonoBehaviour
     void Update()
     {
     
-        if (CurrentLine =>0);
+        if (CurrentLine >=0);
         {
             if (CurrentLine == 1) 
             {
@@ -43,7 +43,7 @@ public class UseDialogue : MonoBehaviour
                 NPC.text = "remember that for next time lovely cause you'll be seeing my face a lot.";
                 
             }
-            else if(CurrentLine = 6)
+            else if(CurrentLine == 6)
             {
                 NPC.text = "Hmm... I just finished work so I have some time I'll have it here. Thank you!";
             }
